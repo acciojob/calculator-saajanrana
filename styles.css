@@ -1,46 +1,20 @@
+ .calculator{
+  display: flex;
+	  flex-direction:column;
+	  gap:10px;
+  justify-content: center;
+  align-items: center;
+ padding:20px;
+  margin: auto;
+	  border:1px solid black;
+	  width:350px
 
-/* Your CSS Code here. */'
-body {
-  background-color: lightgray;
 }
 
-/* Select all paragraphs and set their font size and line height */
-p {
-  font-size: 16px;
-  line-height: 1.5;
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
 }
-
-/* Select all links and change their color and text decoration */
-a {
-  color: blue;
-  text-decoration: none;
-}
-
-/* Select all headings and change their font weight and margin */
-h1, h2, h3 {
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-/* Select the navigation menu and style its list items */
-.nav-menu li {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-/* Select an element with the class "btn" and set its background color and padding */
-.btn {
-  background-color: orange;
-  padding: 10px 20px;
-}
-
-/* Select an element with the ID "header" and set its height and background image */
-#header {
-  height: 200px;
-  background-image: url('header-image.jpg');
-}
-
-/* Select all elements with the class "container" and center-align their text */
-.container {
-  text-align: center;
+input{
+	width:318px;
 }
