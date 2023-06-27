@@ -1,33 +1,33 @@
-//your code here
-document.querySelectorAll("#calculator button").forEach(button => {
-  button.addEventListener("click", handleButtonClick);
-});
-
-// Function to handle button clicks
-function handleButtonClick(event) {
-  const buttonId = event.target.id;
+document.addEventListener("DOMContentLoaded", function() {
   const display = document.getElementById("display");
-  
-  switch (buttonId) {
-    case "C":
-      // Clear the display
-      display.value = "";
-      break;
-    case "back":
-      // Remove the last character from display
-      display.value = display.value.slice(0, -1);
-      break;
-    case "equal":
-      // Evaluate the expression and display the result
-      try {
-        display.value = eval(display.value);
-      } catch (error) {
-        display.value = "Error";
+  const buttons = document.querySelectorAll("button");
+
+  buttons.forEach(button => {
+    button.addEventListener("click", function() {
+      const value = button.innerText;
+      const currentDisplay = display.value;
+
+      if (value === "C") {
+        display.value = "";
+      } else if (value === "&larr;") {
+        display.value = currentDisplay.slice(0, -1);
+      } else if (value === "=") {
+        try {
+          display.value = evaluateExpression(currentDisplay);
+        } catch (error) {
+          display.value = "Error";
+        }
+      } else {
+        display.value += value;
       }
-      break;
-    default:
-      // Append the button value to the display
-      display.value += buttonId;
-      break;
+    });
+  });
+
+  function evaluateExpression(expression) {
+    // Handle open and close brackets
+    expression = expression.replace(/op/g, "(").replace(/cl/g, ")");
+
+    // Evaluate the expression
+    return eval(expression);
   }
-}
+});
