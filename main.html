@@ -1,38 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Calculator</title>
-  </head>
-  <body>
-     <div class="calculator">
-    <input type="text" id="display" readonly>
-    <div class="buttons">
-      <button id="C">C</button>
-      <button id="divi">/</button>
-      <button id="*">*</button>
-      <button id="back">&larr;</button>
-      <button id="7">7</button>
-      <button id="8">8</button>
-      <button id="9">9</button>
-      <button id="-">-</button>
-      <button id="4">4</button>
-      <button id="5">5</button>
-      <button id="6">6</button>
-      <button id="plus">+</button>
-      <button id="1">1</button>
-      <button id="2">2</button>
-      <button id="3">3</button>
-      <button id=".">.</button>
-      <button id="op">(</button>
-      <button id="0">0</button>
-      <button id="cl">)</button>
-      <button id="equal">=</button>
-    </div>
-  </div>
-    <script src="script.js"></script>
-  </body>
+
+<html>
+
+<head>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<!-- the entire body must be written by student -->
+	<input type="text" id="input">
+	<button id ="block0" value ="0" onclick="solve(this.value)">0</button>
+	<button id ="block1" value ="1" onclick="solve(this.value)">1</button>
+	<button id ="block2" value ="2" onclick="solve(this.value)">2</button>
+	<button id ="block3" value ="3" onclick="solve(this.value)">3</button>
+	<button id ="block4" value ="4" onclick="solve(this.value)">4</button>
+	<button id ="block5" value ="5" onclick="solve(this.value)">5</button>
+	<button id ="block6" value ="6" onclick="solve(this.value)">6</button>
+	<button id ="block7" value ="7" onclick="solve(this.value)">7</button>
+	<button id ="block8" value ="8" onclick="solve(this.value)">8</button>
+	<button id ="block9" value ="9" onclick="solve(this.value)">9</button>
+	<button id ="plus" value ="+" onclick="solve(this.value)">+</button>
+	<button id ="minus" value ="-" onclick="solve(this.value)">-</button>
+	<button id ="multiply" value ="*" onclick="solve(this.value)">*</button>
+	<button id ="divide" value ="/" onclick="solve(this.value)">/</button>
+	<button id ="ans" value ="ans" onclick="solve(this.value)">ans</button>
+	<button id ="clr" value ="clr" onclick="solve(this.value)">clr</button>
+	<button id ="dot" value ="." onclick="solve(this.value)">.</button>
+    <script type="text/javascript" src="./script.js">
+</script>
+
+</body>
+
 </html>
